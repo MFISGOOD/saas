@@ -1,1 +1,1 @@
-https://hidden-thicket-48097.herokuapp.com/ | https://git.heroku.com/hidden-thicket-48097.git
+https://hidden-thicket-48097.herokuapp.com/ 
