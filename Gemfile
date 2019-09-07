@@ -9,6 +9,9 @@ gem 'rails', '~> 6.0.0'
 gem 'sqlite3', '~> 1.4' , group: [:development, :test]
 #use bootstrap library for styles
 gem 'bootstrap-sass', '~> 3.4.1'
+gem 'sassc-rails', '>= 2.1.0'
+#use JQuery
+gem 'jquery-rails'
 #use postgresgl as the database for production
 group :production do
   gem 'pg'

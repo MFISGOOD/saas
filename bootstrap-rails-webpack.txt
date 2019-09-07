@@ -1,0 +1,33 @@
+Rails 6 with Bootstrap and configured with Webpack
+
+Step 1:
+yarn add bootstrap jquery popper.js
+
+Step 2:
+in config/webpack/environment.js add the following:
+
+const { environment } = require('@rails/webpacker')
+
+const webpack = require('webpack')
+environment.plugins.append('Provide', new webpack.ProvidePlugin({
+  $: 'jquery',
+  jQuery: 'jquery',
+  Popper: ['popper.js', 'default']
+}))
+
+module.exports = environment
+
+Step 3:
+in app/javascript/packs/application.js add the following:
+
+require("bootstrap/dist/js/bootstrap")
+
+note: doesn't need to import jquery , popper once initialized as webpacker plugin
+
+step 4:
+in app/assets/stylesheets/application.css add the following:
+@import "bootstrap/scss/bootstrap";
+or
+*= require bootstrap/scss/bootstrap
+note: rails-sass can pick file from node modules
+This get bootstrap 4 up and running with Rails 6 Beta and webpack! 
