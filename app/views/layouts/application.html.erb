@@ -33,7 +33,11 @@
       </div>
     </nav>
     <div class="container">
-      <%= yield %>
+      <% flash.each do |key, value| %> <!-- alert messages -->
+        <% key = key === 'error' ? 'danger' : key %> <!-- bootstrap alert-danger class -->  
+        <%= content_tag :div, value, class: "alert alert-#{key}" %>
+      <% end %>
+      <%= yield %> <!-- page content -->
     </div> 
   </body>
 </html>
