@@ -14,6 +14,8 @@ gem 'sassc-rails', '>= 2.1.0'
 gem 'font-awesome-sass', '~> 5.9.0'
 #use JQuery
 gem 'jquery-rails'
+#use devise
+gem 'devise'
 #use postgresgl as the database for production
 group :production do
   gem 'pg'
