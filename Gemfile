@@ -14,8 +14,12 @@ gem 'sassc-rails', '>= 2.1.0'
 gem 'font-awesome-sass', '~> 5.9.0'
 #use JQuery
 gem 'jquery-rails'
-#use devise
+#use devise for user auth
 gem 'devise'
+#use stripe for handling payments
+gem 'stripe'
+#use figaro to hide secret keys
+gem 'figaro'
 #use postgresgl as the database for production
 group :production do
   gem 'pg'
@@ -28,7 +32,7 @@ gem 'sass-rails', '~> 5'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 4.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
+#gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
