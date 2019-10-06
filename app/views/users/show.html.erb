@@ -1,9 +1,32 @@
-<%= image_tag @user.profile.avatar if@user.profile.avatar.attached? %><br>
-<%= @user.profile.first_name %> <%= @user.profile.last_name %><br>
-<%= @user.profile.job_title %><br>
-<% if current_user.plan_id == 2%>
-    <%= @user.profile.phone_number %><br>
-    <%= @user.profile.contact_email %><br>
-<% end %>
-<%= @user.profile.description %><br>
+<div class="row">
+  <div class="col-md-2">
+    <%= image_tag @user.profile.avatar,class: "img-fluid img-thumbnail" if@user.profile.avatar.attached? %>
+  </div>
+  <div class="col-md-8">
+    <div class="profile-content">
+        <div class="row">
+          <h1 class="zero-margin"><%= @user.profile.first_name %> <%= @user.profile.last_name %></h1>
+          <h3><span class="job-title-icon-container"><%= job_title_icon%></span> <%= @user.profile.job_title %></h3>
+        </div> 
+        <div class="row">     
+            <div  class="well job-title <%= job_title_class %>">
+              <h3 >Description</h3>
+              <%= @user.profile.description %><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="well contact-info">
+              <h3>Contact Info</h3>
+              <% if current_user.plan_id == 2%>
+                <%= @user.profile.phone_number %><br>
+                <%= @user.profile.contact_email %><br><br>
+              <% end %>
+              <% if current_user.plan_id == 1%>
+                upgrade your account to a business account to view contact information
+              <% end %>
+            </div> 
+        </div>
+    </div>
+  </div>
+</div>
 

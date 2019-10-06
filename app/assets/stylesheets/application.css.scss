@@ -15,3 +15,42 @@
     background-color: #fcf8e3;
     border-color: #faebcc;
 }
+
+// profile
+.profile-content{
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.job-title-icon-container{
+    display: inline-block;
+    font-size: 0.8em;
+    box-sizing: border-box;
+    border: 1px solid #f5f9f5;
+    border-radius: 2px;
+}
+.job-title-icon{
+    padding: 5px;
+    width: 2em;
+    text-align: center;
+}
+.job-developer-icon{
+    color: green;
+    background: black;
+}
+.job-investor-icon{
+    color: gold;
+    background: blue;
+}
+.job-entrepreneur-icon{
+    color: white;
+    background: black;
+}
+.well.job-title,.well.contact-info{
+    h3{
+        margin-top: 0px;
+    }
+}
+// misc
+.zero-margin{
+    margin: 0;
+}
